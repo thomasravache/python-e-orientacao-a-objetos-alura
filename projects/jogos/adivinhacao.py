@@ -10,9 +10,18 @@ chute = int(chute_tipo_string)
 
 print('Você digitou ', chute)
 
+acertou = chute == numero_secreto
+menor = chute < numero_secreto
+maior = chute > numero_secreto
+
 # Necessária a identação de 4 espaços, senão o python não entende. Ele se baseia na identação do código
 
-if (chute == numero_secreto):
+if (acertou):
     print('Você acertou!')
 else:
-    print('Você errou!')
+    if (maior):
+        print('Seu chute foi maior que o número secreto')
+    elif (menor):
+        print('Seu chute foi menor que o número secreto')
+
+print('Fim do jogo')
